@@ -1,0 +1,60 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Karla:wght@400;800&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;800&display=swap" rel="stylesheet">
+        
+    </head>
+    <body>
+        <div class="container">
+             <div class="header">
+                <h1>Generate a</h1>
+                <h1 class="color_green">random password</h1>
+             </div> 
+            
+            <p class="note">Never use an insecure password again.</p>
+            
+            <div class="password_generate_options_container">                
+                
+                <!-- slider to choose the length of password -->
+                <div class="slider_container">
+                    
+                    <input class="slider_passwort_length" type="range" id="password_langth" min="4" max="30" value="15">
+                    <p>Password length <span id="password-bullet" class="range-label">15</span></p>
+                    
+                </div>
+                 
+                <!-- checkboxes to exclude numbers and/or symbols -->
+                <div class="checkboxes_container">                    
+                    
+                    <div class="checkbox">
+                        <input class="checkbox_no_numbers" type="checkbox" id="no_numbers" name="no_numbers" value="exclude_numbers">
+                        <label for="no_numbers"></label><p>Exclude numbers</p>
+                    </div>
+                    
+                    <div class="checkbox">
+                        <input class="checkbox_no_symbols" type="checkbox" id="no_symbols" name="no_symbols" value="exclude_symbols">
+                        <label for="no_symbols"></label><p>Exclude symbols</p>
+                    </div>
+                
+                <!-- CREATE THE PASSWORDS -->
+                <button class="btn" onclick="generatePasswords()">Generate passwords</button>        
+                
+            </div>
+            
+            <div class="passwords_container">
+                <div class="passwords_field" id="first_field">. . .</div>
+                <div class="passwords_field" id="second_field">. . .</div>                
+            </div>
+            
+        </div>        
+        
+      
+        <script src="index.js"></script>
+    </body>
+</html>
